@@ -5,8 +5,25 @@
 <!--list of global events-->
 
 
-<!--node Thymio 69-->
-<node nodeId="{caceda76-d01d-45de-88d1-f0c8d1288e47}" name="Thymio 69"><![CDATA[]]></node>
+<!--node TH 073-->
+<node nodeId="{01f7da03-e5ae-4114-82d9-ca7500ca08c3}" name="TH 073"><![CDATA[var state = 0
+
+call prox.comm.enable(1)
+
+
+onevent prox
+
+
+# il faut 	que les deux capteurs soient au dessus de 100 tous les deux pour avancer, sinon on tourne
+
+
+if prox.ground.ambiant[0] > 120 and prox.ground.ambiant[1] > 120 then
+	state = 1
+else
+	state = 2
+end
+
+prox.comm.tx = state]]></node>
 
 
 </network>

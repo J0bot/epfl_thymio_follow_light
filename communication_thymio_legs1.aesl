@@ -1,0 +1,12 @@
+<!DOCTYPE aesl-source>
+<network>
+
+
+<!--list of global events-->
+
+
+<!--node Thymio 69-->
+<node name="Thymio 69" nodeId="{caceda76-d01d-45de-88d1-f0c8d1288e47}"><![CDATA[]]></node>
+
+
+</network>
