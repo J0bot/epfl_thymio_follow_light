@@ -6,7 +6,7 @@
 
 
 <!--node TH 073-->
-<node nodeId="{01f7da03-e5ae-4114-82d9-ca7500ca08c3}" name="TH 073"><![CDATA[var state = 0
+<node name="TH 073" nodeId="{01f7da03-e5ae-4114-82d9-ca7500ca08c3}"><![CDATA[var state = 0
 
 call prox.comm.enable(1)
 
@@ -19,8 +19,10 @@ onevent prox
 
 if prox.ground.ambiant[0] > 120 and prox.ground.ambiant[1] > 120 then
 	state = 1
-else
-	state = 2
+elseif prox.ground.ambiant[0] > prox.ground.ambiant[1] then
+	state = 3
+elseif prox.ground.ambiant[0] < prox.ground.ambiant[1] then
+	state = 4
 end
 
 prox.comm.tx = state]]></node>
