@@ -3,4 +3,6 @@ C'est un projet dans lequel on va empiler deux thymio, un en tant que jambes et 
 
 Le robot a comme goal de se diriger vers la lumière, il va suivre le soleil
 
+En collaboration avec https://github.com/AIDANTHEGIGACHAD et https://github.com/loduxs
+
 ![alt text](https://github.com/J0bot/epfl_thymio_follow_light/blob/main/lambo.jpeg)
