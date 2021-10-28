@@ -6,27 +6,45 @@
 
 
 <!--node Thymio 69-->
-<node nodeId="{caceda76-d01d-45de-88d1-f0c8d1288e47}" name="Thymio 69"><![CDATA[var state
+<node name="Thymio 69" nodeId="{caceda76-d01d-45de-88d1-f0c8d1288e47}"><![CDATA[var state
+var state_machine = 0
 
 call prox.comm.enable(1)
+
+onevent buttons
+
+#Code pour activer ou desactiver le robot
+when button.center == 1 do
+	if state_machine == 1 then
+		state_machine = 0
+	else
+		state_machine = 1
+	end
+end
 
 onevent prox
 
 state = prox.comm.rx
 
-if state == 0 then
-	motor.left.target = 0
-	motor.right.target = 0
-elseif state == 1 then
-	motor.left.target = 300
-	motor.right.target = 300
-elseif state == 3 then
-	motor.left.target = 300
-	motor.right.target = -300
-elseif state == 4 then
-	motor.left.target = -300
-	motor.right.target = 300
-end]]></node>
+if state_machine == 1 then
+		if state == 0 then
+		motor.left.target = 0
+		motor.right.target = 0
+	elseif state == 1 then
+		motor.left.target = 300
+		motor.right.target = 300
+	elseif state == 3 then
+		motor.left.target = 300
+		motor.right.target = -300
+	elseif state == 4 then
+		motor.left.target = -300
+		motor.right.target = 300
+	end
+else 
+motor.right.target = 0
+motor.left.target = 0
+end
+]]></node>
 
 
 </network>

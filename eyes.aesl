@@ -17,7 +17,7 @@ onevent prox
 # il faut 	que les deux capteurs soient au dessus de 100 tous les deux pour avancer, sinon on tourne
 
 
-if prox.ground.ambiant[0] > 120 and prox.ground.ambiant[1] > 120 then
+if prox.ground.ambiant[0] > 300 and prox.ground.ambiant[1] > 300 then
 	state = 1
 elseif prox.ground.ambiant[0] > prox.ground.ambiant[1] then
 	state = 3
