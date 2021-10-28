@@ -14,7 +14,7 @@ call prox.comm.enable(1)
 onevent prox
 
 
-# il faut 	que les deux capteurs soient au dessus de 100 tous les deux pour avancer, sinon on tourne
+# il faut que les deux capteurs soient au dessus de 300 tous les deux pour avancer, sinon on tourne.
 
 
 if prox.ground.ambiant[0] > 300 and prox.ground.ambiant[1] > 300 then
